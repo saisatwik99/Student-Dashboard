@@ -95,3 +95,14 @@ isBooked ? yes or no
 
 if booked shld send email
 
+============================
+Templates
+
+CaLeader colorlib  Logo, someparts of website
+pickme colorlib   booking form
+acropos colorlib carcard
+primecab colorlib total
+AutoServicing homepage
+autocare total
+colorlib
+
