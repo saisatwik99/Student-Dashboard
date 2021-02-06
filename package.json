@@ -1,24 +1,27 @@
 {
-  "name": "car-pooling",
+  "name": "student-dashboard",
   "version": "1.0.0",
-  "description": "Car pooling web application.",
+  "description": "Student Dashboard web application",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.14",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saisatwik99/Car-Pooling.git"
+    "url": "git+https://github.com/saisatwik99/Student-Dashboard.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saisatwik99/Car-Pooling/issues"
+    "url": "https://github.com/saisatwik99/Student-Dashboard/issues"
   },
-  "homepage": "https://github.com/saisatwik99/Car-Pooling#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
-  }
+  "homepage": "https://github.com/saisatwik99/Student-Dashboard#readme"
 }

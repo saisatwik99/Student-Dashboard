@@ -1,14 +1,20 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
 const app = express();
 
-const home    =     require("./routes/home");
-const signup  =     require("./routes/signup");
-const login  =     require("./routes/login");
+const adminRoutes = require('./routes/admin');
 
-app.use("/",home);
-app.use("/signup",signup);
-app.use("/login",login);
+const MONGODB_URI =
+'mongodb+srv://student:student@cluster1.7afip.mongodb.net/Student-Dashboard?retryWrites=true&w=majority';
 
-app.listen(3000, () => {
-    console.log("Server listening at 3000");
-});
+app.use("/admin",adminRoutes);
+
+mongoose
+  .connect(MONGODB_URI)
+  .then(result => {
+    app.listen(3000);
+  })
+  .catch(err => {
+    console.log(err);
+  });
