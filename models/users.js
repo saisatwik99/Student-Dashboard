@@ -31,6 +31,10 @@ const userSchema = new Schema({
     type: Number,
     required: true
   },
+  semester: {
+    type: Number,
+    required: true
+  },
   branch: {
     type: String,
     required: true
