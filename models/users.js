@@ -38,6 +38,9 @@ const userSchema = new Schema({
   branch: {
     type: String,
     required: true
+  },
+  cousres: {
+    type: Array
   }
   
 });
