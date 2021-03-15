@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const attendanceSchema = new Schema({
+const courseSchema = new Schema({
   courseName: {
       type: String,
       required: true
@@ -17,4 +17,4 @@ const attendanceSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Attendance', attendanceSchema);
+module.exports = mongoose.model('Course', courseSchema);

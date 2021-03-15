@@ -11,6 +11,28 @@
     />
     <link rel="stylesheet" href="/dashboard/styles.css" />
     <title>Student Dashboard</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Present',     23],
+          ['Absent',      7]
+        ]);
+
+        var options = {
+          title: 'Artificial Intelligence'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
   </head>
   <body id="body">
     <div class="container">
@@ -46,48 +68,17 @@
           <!-- MAIN TITLE ENDS HERE -->
 
           <!-- MAIN CARDS STARTS HERE -->
-          <!-- <div class="main__cards">
-            <div class="card">
-              <i
-                class="fa fa-user-o fa-2x text-lightblue"
-                aria-hidden="true"
-              ></i>
-              <div class="card_inner">
-                <p class="text-primary-p">Number of Subscribers</p>
-                <span class="font-bold text-title">578</span>
-              </div>
-            </div>
+          <div class="main__cards">
+            
 
             <div class="card">
               <i class="fa fa-calendar fa-2x text-red" aria-hidden="true"></i>
               <div class="card_inner">
-                <p class="text-primary-p">Times of Watching</p>
-                <span class="font-bold text-title">2467</span>
+                <div id="piechart" style="width: 700px; height: 400px;"></div>
               </div>
             </div>
-
-            <div class="card">
-              <i
-                class="fa fa-video-camera fa-2x text-yellow"
-                aria-hidden="true"
-              ></i>
-              <div class="card_inner">
-                <p class="text-primary-p">Number of Videos</p>
-                <span class="font-bold text-title">340</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <i
-                class="fa fa-thumbs-up fa-2x text-green"
-                aria-hidden="true"
-              ></i>
-              <div class="card_inner">
-                <p class="text-primary-p">Number of Likes</p>
-                <span class="font-bold text-title">645</span>
-              </div>
-            </div>
-          </div> -->
+            
+          </div>
           <!-- MAIN CARDS ENDS HERE -->
 
           <!-- CHARTS STARTS HERE -->
@@ -154,14 +145,14 @@
         </div>
 
         <div class="sidebar__menu">
-          <div class="sidebar__link active_menu_link">
+          <div class="sidebar__link">
             <i class="fa fa-home"></i>
             <a href="#">Dashboard</a>
           </div>
           <h2>Class</h2>
-          <div class="sidebar__link">
+          <div class="sidebar__link active_menu_link">
             <i class="fa fa-user-secret" aria-hidden="true"></i>
-            <a href="/attendance">Attendance</a>
+            <a href="#">Attendance</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-building-o"></i>

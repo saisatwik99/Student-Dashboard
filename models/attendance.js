@@ -11,7 +11,7 @@ const attendanceSchema = new Schema({
       type: String,
       required: true
   },
-  classesAttended: {
+  classesAbsent: {
     type: Number,
     required: true
   }

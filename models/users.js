@@ -39,7 +39,7 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  cousres: {
+  courses: {
     type: Array
   }
   
