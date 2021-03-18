@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/dashboard/styles.css" />
+    <link rel="stylesheet" href="/dashboard/timetable.css"/>
     <title>Student Dashboard</title>
   </head>
   <body id="body">
@@ -25,6 +26,12 @@
         </div>
         <div class="navbar__right">
           <a href="#">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+          </a>
+          <a href="#">
             <img width="50" src="/dashboard/assets/avatar.png" alt="" />
             <!-- <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
           </a>
@@ -33,13 +40,89 @@
 
       <main>
         <div class="main__container">
-          <div class="main__title">
-            <img src="/dashboard/assets/hello.svg" alt="" />
-            <div class="main__greeting">
-              <h1>Hello Sai Satwik</h1>
-              <p>Welcome to your dashboard</p>
-            </div>
-          </div>
+            <div class="timetable">
+                <div class="week-names">
+                  <div>9:00 - 10:00</div>
+                  <div>10:00 - 11:00</div>
+                  <div>11:00 - 12:00</div>
+                  <div>13:00 - 14:00</div>
+                  <div>14:00 - 15:00</div>
+                  <div>15:00 - 16:00</div>
+                  <div>16:00 - 17:00</div>
+                </div>
+                <div class="time-interval">
+                  
+                  <div>MONDAY</div>
+                  <div>TUESDAY</div>
+                  <div>WEDNESDAY</div>
+                  <div>THURSDAY</div>
+                  <div>FRIDAY</div>
+                </div>
+                <div class="content">
+                  <div>
+                    <div class="accent-orange-gradient"><a>CCN</a></div>
+                  </div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div>
+                    <div class="accent-green-gradient"><a>WAD</a></div>
+                  </div>
+
+
+                  <div></div>
+                  <div><div class="accent-pink-gradient"><a>NSS</a></div></div>
+                  <div></div>
+                  <div>
+                    <div class="accent-cyan-gradient"><a>AI</a></div>
+                  </div>
+                  <!-- <div></div>
+                  <div>
+                    <div class="accent-pink-gradient"></div>
+                  </div> -->
+                  <div></div>
+
+
+                  <div>
+                    <div class="accent-purple-gradient"><a>ML</a></div>
+                  </div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+
+
+                  <div class="accent-purple-gradient"><a>CCN</a></div>
+                  <div></div>
+                  <div></div>
+                  <div>
+                    <div class="accent-purple-gradient"><a>TOC</a></div>
+                  </div>
+                  <div></div>
+
+
+                  <div></div>
+                  <div><div class="accent-purple-gradient"><a>CS-4</a></div></div>
+                  <div></div>
+                  <div> <div class="accent-orange-gradient"><a>COS</a></div></div>
+                  <div></div>
+
+                  <div>
+                    <div class="accent-pink-gradient"><a>DLD</a></div>
+                  </div>
+                  <div>
+                    <div class="accent-pink-gradient"><a>CP</a></div>
+                  </div>
+                  <div>  </div>
+                  <div></div>
+                  <div><div class="accent-green-gradient"><a>DLD</a></div></div>
+                  <div></div>
+                  <div><div class="accent-green-gradient"><a>TOC</a></div></div>
+                  <div></div>
+                  <div></div>
+                  <div><div class="accent-purple-gradient"><a>COS</a></div></div>
+                </div>
+              </div>    
         </div>
       </main>
 
@@ -58,26 +141,22 @@
         </div>
 
         <div class="sidebar__menu">
-          <div class="sidebar__link active_menu_link">
+          <div class="sidebar__link">
             <i class="fa fa-home"></i>
             <a href="/user/home">Dashboard</a>
           </div>
           <h2>Class</h2>
           <div class="sidebar__link">
             <i class="fa fa-user-secret" aria-hidden="true"></i>
-            <a href="/attendance">Attendance</a>
+            <a href="#">Attendance</a>
           </div>
-          <div class="sidebar__link">
+          <div class="sidebar__link active_menu_link">
             <i class="fa fa-building-o"></i>
             <a href="/user/timetable">Timetable</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-wrench"></i>
             <a href="#">Alamnac</a>
-          </div>
-          <div class="sidebar__link">
-            <i class="fa fa-wrench"></i>
-            <a href="#">Results</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-archive"></i>
@@ -109,10 +188,6 @@
             <i class="fa fa-money"></i>
             <a href="#">Contact Us</a>
           </div>
-          <!-- <div class="sidebar__logout">
-            <i class="fa fa-power-off"></i>
-            <a href="#">Log out</a>
-          </div> -->
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
             <a onclick="document.getElementById('myform').submit();">Log out</a>

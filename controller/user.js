@@ -43,6 +43,9 @@ exports.attendance = async (req, res) => {
     }));
     res.send(attendanceResult); 
 }
+exports.timetable = async (req, res) => {
+    res.render('timetable');
+}
 
 exports.logout = (req, res, next) => {
     req.session.destroy((err) => {

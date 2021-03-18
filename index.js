@@ -33,6 +33,9 @@ app.use(
 
 app.use("/admin",adminRoutes);
 app.use("/user",userRoutes);
+app.use("/", (req, res) => {
+  res.render('index');
+});
 
 mongoose
   .connect(process.env.MONGODB_URI)
