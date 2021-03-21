@@ -24,9 +24,9 @@ exports.login = async (req, res, next) => {
     // res.send(token);
 }
 
-exports.home = (req, res) => {
-    console.log(req.user);
-    res.render('dashboard');
+exports.home = async (req, res) => {
+    const user = await User.findOne({ email: req.user.email });
+    res.render('dashboard', {name: user.firstName});
 }
 
 exports.attendance = async (req, res) => {
@@ -44,11 +44,22 @@ exports.attendance = async (req, res) => {
     res.send(attendanceResult); 
 }
 exports.timetable = async (req, res) => {
-    res.render('timetable');
+    const user = await User.findOne({ email: req.user.email });
+    res.render('timetable', {name: user.firstName});
 }
 
 exports.logout = (req, res, next) => {
     req.session.destroy((err) => {
         res.redirect('login');
     })
+}
+
+exports.library = async (req, res) => {
+    const user = await User.findOne({ email: req.user.email });
+    res.render("library", {name: user.firstName});
+}
+
+exports.results = async     (req, res) => {
+    const user = await User.findOne({ email: req.user.email });
+    res.render("results", {name: user.firstName});
 }

@@ -9,6 +9,8 @@ router.post('/login', userController.login);
 router.get('/home',verify, userController.home);
 router.get('/attendance',verify, userController.attendance);
 router.get('/timetable', verify, userController.timetable);
+router.get('/library', verify, userController.library);
+router.get('/results', verify, userController.results);
 router.post('/logout', userController.logout);
 
 module.exports = router;
