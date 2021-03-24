@@ -11,6 +11,8 @@ router.get('/attendance',verify, userController.attendance);
 router.get('/timetable', verify, userController.timetable);
 router.get('/library', verify, userController.library);
 router.get('/results', verify, userController.results);
+router.get('/alumninetwork', verify, userController.alumninetwork);
+router.get('/oppurtunity', verify, userController.oppurtunity);
 router.post('/logout', userController.logout);
 
 module.exports = router;

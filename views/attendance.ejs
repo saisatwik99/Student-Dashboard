@@ -10,29 +10,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/dashboard/styles.css" />
+    <!-- ============== CHART ==================== -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  -->
+    <link rel="stylesheet" href="/attendance/style.css" />
+    <!-- ========================================= -->
     <title>Student Dashboard</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Present',     23],
-          ['Absent',      7]
-        ]);
-
-        var options = {
-          title: 'Artificial Intelligence'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
   </head>
   <body id="body">
     <div class="container">
@@ -55,78 +41,30 @@
 
       <main>
         <div class="main__container">
+          <center><h1>ATTENDANCE</h1></center>
           <!-- MAIN TITLE STARTS HERE -->
+          <section id="s-team" class="section">
+            <div class="b-skills">
+                
+                <div class="skill-row">
 
-          <div class="main__title">
-            <img src="/dashboard/assets/hello.svg" alt="" />
-            <div class="main__greeting">
-              <h1>Hello Sai Satwik</h1>
-              <p>Welcome to your dashboard</p>
-            </div>
-          </div>
+                  <% info.forEach(element => { %>
+                      <div class="skill-item center-block">
+                        <div class="chart-container">
+                          <div class="chart " data-percent="<%=element.Percent%>" data-bar-color="<%=element.color%>">
+                            <span class="percent" data-after="%"><%=element.Percent%></span>
+                          </div>
+                        </div>
+                        <h2><%=element.courseName%></h2>
+                        <p>Present &nbsp;:&nbsp; <span style="color: green;"><%=element.Present%></span></p>
+                        <p>Absent &nbsp; : &nbsp; &nbsp; <span style="color: red;"><%=element.Absent%></span>  </p>
+                        <p>Total &nbsp; &nbsp; &nbsp; : &nbsp; <span style="color: blue;"><%=element.Total%></span></p>
+                      </div>
+                  <% }) %>
 
-          <!-- MAIN TITLE ENDS HERE -->
-
-          <!-- MAIN CARDS STARTS HERE -->
-          <div class="main__cards">
-            
-
-            <div class="card">
-              <i class="fa fa-calendar fa-2x text-red" aria-hidden="true"></i>
-              <div class="card_inner">
-                <div id="piechart" style="width: 700px; height: 400px;"></div>
-              </div>
-            </div>
-            
-          </div>
-          <!-- MAIN CARDS ENDS HERE -->
-
-          <!-- CHARTS STARTS HERE -->
-          <!-- <div class="charts">
-            <div class="charts__left">
-              <div class="charts__left__title">
-                <div>
-                  <h1>Daily Reports</h1>
-                  <p>Cupertino, California, USA</p>
-                </div>
-                <i class="fa fa-usd" aria-hidden="true"></i>
-              </div>
-              <div id="apex1"></div>
-            </div>
-
-            <div class="charts__right">
-              <div class="charts__right__title">
-                <div>
-                  <h1>Stats Reports</h1>
-                  <p>Cupertino, California, USA</p>
-                </div>
-                <i class="fa fa-usd" aria-hidden="true"></i>
-              </div>
-
-              <div class="charts__right__cards">
-                <div class="card1">
-                  <h1>Income</h1>
-                  <p>$75,300</p>
-                </div>
-
-                <div class="card2">
-                  <h1>Sales</h1>
-                  <p>$124,200</p>
-                </div>
-
-                <div class="card3">
-                  <h1>Users</h1>
-                  <p>3900</p>
-                </div>
-
-                <div class="card4">
-                  <h1>Orders</h1>
-                  <p>1881</p>
                 </div>
               </div>
-            </div>
-          </div> -->
-          <!-- CHARTS ENDS HERE -->
+          </section>
         </div>
       </main>
 
@@ -214,5 +152,58 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="/dashboard/script.js"></script>
+    <!-- ====================== CHART SCRIPT ============================= -->
+    <script src="/attendance/plugins/jquery-2.2.4.min.js"></script>
+ <script src="/attendance/plugins/jquery.appear.min.js"></script>
+ <script src="/attendance/plugins/jquery.easypiechart.min.js"></script> 
+ <script>
+    'use strict';
+
+var $window = $(window);
+
+function run()
+{
+	var fName = arguments[0],
+		aArgs = Array.prototype.slice.call(arguments, 1);
+	try {
+		fName.apply(window, aArgs);
+	} catch(err) {
+		 
+	}
+};
+ 
+/* chart
+================================================== */
+function _chart ()
+{
+	$('.b-skills').appear(function() {
+		setTimeout(function() {
+			$('.chart').easyPieChart({
+				easing: 'easeOutElastic',
+				delay: 3000,
+				barColor: '#369670',
+				trackColor: '#fff',
+				scaleColor: false,
+				lineWidth: 21,
+				trackWidth: 21,
+				size: 250,
+				lineCap: 'round',
+				onStep: function(from, to, percent) {
+					this.el.children[0].innerHTML = Math.round(percent);
+				}
+			});
+		}, 150);
+	});
+};
+ 
+
+$(document).ready(function() {
+  
+	run(_chart);
+  
+    
+});
+</script>
+    <!-- ================================================================ -->
   </body>
 </html>

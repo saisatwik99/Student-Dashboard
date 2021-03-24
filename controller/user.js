@@ -32,16 +32,22 @@ exports.home = async (req, res) => {
 exports.attendance = async (req, res) => {
     const { email } = req.user;
     const user = await User.findOne({ email });
-    const attendanceResult = await Promise.all(user.courses.map( async (e) => {
+    const attendanceResult = await Promise.all(user.courses.map( async (e, index) => {
         const course = await Course.findOne({ courseName: e });
-        const attendance = await Attendance.findOne({ email, courseName: e });  
+        const attendance = await Attendance.findOne({ email, courseName: e });
+        const allColors = ["#23afe3", "#a7d212", "#ff4241", "#edc214"]  
         return {
             courseName: e,
-            totalClasses: course.totalClasses,
-            classesAbsent: attendance.classesAbsent
+            "Present": course.totalClasses - attendance.classesAbsent,
+            "Absent": attendance.classesAbsent,
+            "Total": course.totalClasses,
+            "Percent": Math.floor(( (course.totalClasses - attendance.classesAbsent)*100/course.totalClasses)),
+            "color": allColors[index%4]
+
         };
     }));
-    res.send(attendanceResult); 
+    console.log(attendanceResult);
+    res.render("attendance", {name: user.firstName, info: attendanceResult}); 
 }
 exports.timetable = async (req, res) => {
     const user = await User.findOne({ email: req.user.email });
@@ -62,4 +68,12 @@ exports.library = async (req, res) => {
 exports.results = async     (req, res) => {
     const user = await User.findOne({ email: req.user.email });
     res.render("results", {name: user.firstName});
+}
+
+exports.alumninetwork = (req, res) => {
+    res.render("alumninetwork");
+}
+
+exports.oppurtunity = (req, res) => {
+    res.render("oppurtunity");
 }

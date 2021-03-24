@@ -10,7 +10,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/dashboard/styles.css" />
+    <link rel="stylesheet" href="/oppurtunity/style.css" />
     <title>Student Dashboard</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body id="body">
     <div class="container">
@@ -33,13 +35,25 @@
 
       <main>
         <div class="main__container">
-          <div class="main__title">
-            <img src="/dashboard/assets/hello.svg" alt="" />
-            <div class="main__greeting">
-              <h1>Hello <%=name%></h1>
-              <p>Welcome to your dashboard</p>
-            </div>
-          </div>
+          <center><h1>OPPURTUNITIES</h1></center>
+          <!-- MAIN TITLE STARTS HERE -->
+          <div class="recipe-card">
+            <article>
+                <h2>Google Intenship 2022</h2>
+        
+                <ul>
+                    <li><span class="icon icon-users"></span><span>1</span></li>
+                    <li><span class="icon icon-clock"></span><span>15 min</span></li>
+                    <li><span class="icon icon-level"></span><span>Beginner level</span></li>
+                    <li><span class="icon icon-calories"></span><span>248</span></li>
+                </ul>
+        
+                <p>Google opened interns for UG students for the upcoming Summer</p>
+                
+                <p class="ingredients"><span>Ingredients:&nbsp;</span>Milk, salt, coriander, cardamom, cinnamon, turmeric, honey, vanilla extract, regular oats, oat bran.</p>
+            </article>
+        </div>
+                
         </div>
       </main>
 
@@ -47,7 +61,7 @@
         <div class="sidebar__title">
           <div class="sidebar__img">
             <img src="/dashboard/assets/student.png" alt="logo" />
-            <h1><%=name%></h1>
+            <h1>Sai Satwik</h1>
           </div>
           <i
             onclick="closeSidebar()"
@@ -58,30 +72,34 @@
         </div>
 
         <div class="sidebar__menu">
-          <div class="sidebar__link active_menu_link">
+          <div class="sidebar__link">
             <i class="fa fa-home"></i>
-            <a href="/user/home">Dashboard</a>
+            <a href="#">Dashboard</a>
           </div>
           <h2>Class</h2>
-          <div class="sidebar__link">
+          <div class="sidebar__link active_menu_link">
             <i class="fa fa-user-secret" aria-hidden="true"></i>
-            <a href="/user/attendance">Attendance</a>
+            <a href="#">Attendance</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-building-o"></i>
-            <a href="/user/timetable">Timetable</a>
+            <a href="#">Timetable</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-wrench"></i>
-            <a href="#">Almanac</a>
+            <a href="#">Alamnac</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-wrench"></i>
-            <a href="#">Results</a>
+            <a href="#">Calender</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-archive"></i>
             <a href="#">Study Material</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-handshake-o"></i>
+            <a href="#">Mess Schedule</a>
           </div>
           <h2>College</h2>
           <div class="sidebar__link">
@@ -94,7 +112,7 @@
           </div>
           <div class="sidebar__link">
             <i class="fa fa-calendar-check-o"></i>
-            <a href="/user/library">Library</a>
+            <a href="#">Library</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-files-o"></i>
@@ -115,12 +133,12 @@
           </div> -->
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
-            <a onclick="document.getElementById('logout').submit();" style="cursor: pointer;">Log out</a>
+            <a onclick="document.getElementById('myform').submit();">Log out</a>
           </div>
+          <form id="myform" method="post" action="/user/logout"></form>
         </div>
       </div>
     </div>
-    <form id="logout" method="post" action="/user/logout"></form>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="/dashboard/script.js"></script>
   </body>
