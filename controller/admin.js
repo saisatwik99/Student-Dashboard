@@ -97,3 +97,7 @@ exports.addOpportunity = async(req, res, next) => {
         res.status(400).send(err);
     }
 }
+
+exports.login = (req, res) => {
+    res.render('adminlogin');    
+}
