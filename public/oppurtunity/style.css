@@ -3,30 +3,16 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
-  html {
-    height: 100%;
+  .skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
   }
-  
-  body {
-    background-color: #57abf2;
-    background-image: -webkit-linear-gradient(-225deg, #19d3d1 5%, #57abf2);
-    background-image: linear-gradient(-45deg,#19d3d1 5%, #57abf2);
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-  }
-  
   .recipe-card {
     background: #fff;
     margin: 4em auto;
     width: 90%;
-    max-width: 496px;
+    max-width: 520px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -75,14 +61,14 @@
   }
   .recipe-card article ul li span:nth-of-type(2) {
     margin-left: 0.5em;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 300;
     vertical-align: middle;
     color: #838689;
   }
   .recipe-card article h2, .recipe-card article h3 {
     margin: 0;
-    font-weight: 300;
+    font-weight: 700;
   }
   .recipe-card article h2 {
     font-size: 1.75em;
@@ -93,8 +79,8 @@
     color: #838689;
   }
   .recipe-card article p {
-    margin: 1.25em 0;
-    font-size: 0.8125em;
+    margin: 1.10em 0;
+    font-size: 15px;
     font-weight: 400;
     color: #222222;
   }
@@ -103,12 +89,12 @@
     color: #000000;
   }
   .recipe-card article .ingredients {
-    margin: 2em 0 0.5em;
+    margin: 1.10em 0 0.5em;
   }
   .recipe-card .icon {
     display: inline;
     display: inline-block;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg);
+    /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg); */
     background-repeat: no-repeat;
   }
   .recipe-card .icon-calories, .recipe-card .icon-calories\:regular {

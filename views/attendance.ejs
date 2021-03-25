@@ -72,7 +72,7 @@
         <div class="sidebar__title">
           <div class="sidebar__img">
             <img src="/dashboard/assets/student.png" alt="logo" />
-            <h1>Sai Satwik</h1>
+            <h1><%=name%></h1>
           </div>
           <i
             onclick="closeSidebar()"
@@ -85,32 +85,24 @@
         <div class="sidebar__menu">
           <div class="sidebar__link">
             <i class="fa fa-home"></i>
-            <a href="#">Dashboard</a>
+            <a href="/user/home">Dashboard</a>
           </div>
           <h2>Class</h2>
           <div class="sidebar__link active_menu_link">
             <i class="fa fa-user-secret" aria-hidden="true"></i>
-            <a href="#">Attendance</a>
+            <a href="/user/attendance">Attendance</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-building-o"></i>
-            <a href="#">Timetable</a>
+            <a href="/user/timetable">Timetable</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-wrench"></i>
             <a href="#">Alamnac</a>
           </div>
           <div class="sidebar__link">
-            <i class="fa fa-wrench"></i>
-            <a href="#">Calender</a>
-          </div>
-          <div class="sidebar__link">
             <i class="fa fa-archive"></i>
             <a href="#">Study Material</a>
-          </div>
-          <div class="sidebar__link">
-            <i class="fa fa-handshake-o"></i>
-            <a href="#">Mess Schedule</a>
           </div>
           <h2>College</h2>
           <div class="sidebar__link">
@@ -123,11 +115,11 @@
           </div>
           <div class="sidebar__link">
             <i class="fa fa-calendar-check-o"></i>
-            <a href="#">Library</a>
+            <a href="/user/library">Library</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-files-o"></i>
-            <a href="#">Oppurtunities</a>
+            <a href="/user/opportunity">Oppurtunities</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-files-o"></i>
@@ -144,12 +136,12 @@
           </div> -->
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
-            <a onclick="document.getElementById('myform').submit();">Log out</a>
+            <a onclick="document.getElementById('myform').submit();" style="cursor: pointer;">Log out</a>
           </div>
-          <form id="myform" method="post" action="/user/logout"></form>
         </div>
       </div>
     </div>
+    <form id="myform" method="post" action="/user/logout"></form>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="/dashboard/script.js"></script>
     <!-- ====================== CHART SCRIPT ============================= -->

@@ -12,7 +12,7 @@ router.get('/timetable', verify, userController.timetable);
 router.get('/library', verify, userController.library);
 router.get('/results', verify, userController.results);
 router.get('/alumninetwork', verify, userController.alumninetwork);
-router.get('/oppurtunity', verify, userController.oppurtunity);
+router.get('/opportunity', verify, userController.opportunity);
 router.post('/logout', userController.logout);
 
 module.exports = router;

@@ -2,6 +2,7 @@ const User =  require('../models/users');
 const Alumni = require('../models/alumni');
 const Course = require('../models/course');
 const Attendance = require('../models/attendance');
+const Opportunity = require('../models/opportunity');
 const bcrypt = require('bcryptjs'); 
 
 exports.addStudent = async (req, res, next) => {
@@ -80,6 +81,16 @@ exports.addCourse = async (req, res, next) => {
         const result = await Course.create({ 
             courseName, totalStudents, totalClasses
         });
+        res.send(result);
+    }
+    catch(err) {
+        res.status(400).send(err);
+    }
+}
+
+exports.addOpportunity = async(req, res, next) => {
+    try {
+        const result = await Opportunity.create(req.body);
         res.send(result);
     }
     catch(err) {

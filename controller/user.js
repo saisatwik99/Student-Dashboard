@@ -1,6 +1,7 @@
 const User =  require('../models/users');
 const Course = require('../models/course');
 const Attendance = require('../models/attendance');
+const Opportunity = require('../models/opportunity');
 const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken');
 
@@ -65,7 +66,7 @@ exports.library = async (req, res) => {
     res.render("library", {name: user.firstName});
 }
 
-exports.results = async     (req, res) => {
+exports.results = async (req, res) => {
     const user = await User.findOne({ email: req.user.email });
     res.render("results", {name: user.firstName});
 }
@@ -74,6 +75,8 @@ exports.alumninetwork = (req, res) => {
     res.render("alumninetwork");
 }
 
-exports.oppurtunity = (req, res) => {
-    res.render("oppurtunity");
+exports.opportunity = async (req, res) => {
+    const result = await Opportunity.find();
+    const user = await User.findOne({ email: req.user.email });
+    res.render("opportunity", { info: result, name: user.firstName });
 }
