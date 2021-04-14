@@ -2,6 +2,8 @@ const User =  require('../models/users');
 const Course = require('../models/course');
 const Attendance = require('../models/attendance');
 const Opportunity = require('../models/opportunity');
+const Alumni = require('../models/alumni');
+const StudentRequest = require('../models/studentRequests');
 const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken');
 
@@ -71,12 +73,48 @@ exports.results = async (req, res) => {
     res.render("results", {name: user.firstName});
 }
 
-exports.alumninetwork = (req, res) => {
-    res.render("alumninetwork");
+exports.alumninetwork = async (req, res) => {
+    const user = await User.findOne({ email: req.user.email });
+    const alumni = await Alumni.find();
+    res.render("alumninetwork", {name: user.firstName, alumni});
 }
 
 exports.opportunity = async (req, res) => {
     const result = await Opportunity.find();
     const user = await User.findOne({ email: req.user.email });
     res.render("opportunity", { info: result, name: user.firstName });
+}
+
+exports.studentRequestsCreate = async (req, res) => {
+    const user = await User.findOne({ email: req.user.email });
+    const { title, description, tags } = req.body;
+    const DATE = new Date();
+    const date = DATE.getDate() +'-' + (DATE.getMonth()+1) + '-'+  DATE.getFullYear();
+    const result = await StudentRequest.create({
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        date,
+        title,
+        description,
+        tags
+    });
+    res.send(result);
+}
+
+exports.studentRequestsGet = async (req, res) => {
+    const { query } = req.params;
+    const user = await User.findOne({ email: req.user.email });
+    let result;
+    if( query === 'ALL') {
+        result = await StudentRequest.find({
+            email: user.email
+        });
+    } else {
+        result = await StudentRequest.find({
+            email: user.email,
+            status: query
+        });
+    }
+    res.send(result);
 }

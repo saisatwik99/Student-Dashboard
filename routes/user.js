@@ -13,6 +13,8 @@ router.get('/library', verify, userController.library);
 router.get('/results', verify, userController.results);
 router.get('/alumninetwork', verify, userController.alumninetwork);
 router.get('/opportunity', verify, userController.opportunity);
+router.post('/studentRequests/create', verify, userController.studentRequestsCreate);
+router.get('/studentRequests/get/:query', verify, userController.studentRequestsGet);
 router.post('/logout', userController.logout);
 
 module.exports = router;

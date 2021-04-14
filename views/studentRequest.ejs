@@ -10,9 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/dashboard/styles.css" />
-    <link rel="stylesheet" href="/alumni/style.css" />
     <title>Student Dashboard</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body id="body">
     <div class="container">
@@ -35,52 +33,13 @@
 
       <main>
         <div class="main__container">
-          <center><h1>ALUMNI NETWORK</h1></center>
-          <!-- MAIN TITLE STARTS HERE -->
-            <div class="skill-row">
-              <% alumni.map(e => { %>
-
-              
-              <aside class="profile-card">
-                <div class="mask-shadow"></div>
-                <header>
-                  <a href="https://tutsplus.com">
-                    <img src="https://en.gravatar.com/userimage/42992842/b8e8ff24d6f1cb84bbe5c839903086bb.png?size=200">
-                  </a>
-                  <h1><%= e.fullName %></h1>
-                  <h2><%= e.role %></h2>
-              
-                </header>
-                <div class="profile-bio">
-                </div>
-              
-                <ul class="profile-social-links">
-              
-                  <li>
-                    <a href=<%= e.linkedln %>>
-                      <img src="/alumni/linkedin.svg">
-                    </a>
-                  </li>
-              
-                  <li>
-                    <a href=<%= "mailto:" +  e.email %>>
-                      <img src="/alumni/gmail.svg">
-                    </a>
-                  </li>
-              
-                  <!-- <li>
-                    <a href="https://codepen.io/tutsplus">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg">
-                    </a>
-                  </li> -->
-              
-              
-                </ul>
-              
-              </aside>
-              <% }) %>
+          <div class="main__title">
+            <img src="/dashboard/assets/hello.svg" alt="" />
+            <div class="main__greeting">
+              <h1>Hello <%=name%></h1>
+              <p>Welcome to your dashboard</p>
             </div>
-                 
+          </div>
         </div>
       </main>
 
@@ -99,7 +58,7 @@
         </div>
 
         <div class="sidebar__menu">
-          <div class="sidebar__link">
+          <div class="sidebar__link active_menu_link">
             <i class="fa fa-home"></i>
             <a href="/user/home">Dashboard</a>
           </div>
@@ -114,7 +73,11 @@
           </div>
           <div class="sidebar__link">
             <i class="fa fa-wrench"></i>
-            <a href="#">Alamnac</a>
+            <a href="#">Almanac</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-wrench"></i>
+            <a href="#">Results</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-archive"></i>
@@ -133,7 +96,7 @@
             <i class="fa fa-calendar-check-o"></i>
             <a href="/user/library">Library</a>
           </div>
-          <div class="sidebar__link active_menu_link">
+          <div class="sidebar__link">
             <i class="fa fa-files-o"></i>
             <a href="/user/opportunity">Oppurtunities</a>
           </div>
@@ -152,13 +115,13 @@
           </div> -->
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
-            <a onclick="document.getElementById('myform').submit();" style="cursor: pointer;">Log out</a>
+            <a onclick="document.getElementById('logout').submit();" style="cursor: pointer;">Log out</a>
           </div>
-          <form id="myform" method="post" action="/user/logout"></form>
         </div>
       </div>
     </div>
+    <form id="logout" method="post" action="/user/logout"></form>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="/alumni/script.js"></script>
+    <script src="/dashboard/script.js"></script>
   </body>
 </html>
