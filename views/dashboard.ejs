@@ -13,7 +13,7 @@
     <title>Student Dashboard</title>
   </head>
   <body id="body">
-    <div class="container">
+    <div class="container-dashboard">
       <nav class="navbar">
         <div class="nav_icon" onclick="toggleSidebar()">
           <i class="fa fa-bars" aria-hidden="true"></i>
@@ -76,21 +76,17 @@
             <a href="#">Almanac</a>
           </div>
           <div class="sidebar__link">
-            <i class="fa fa-wrench"></i>
-            <a href="#">Results</a>
-          </div>
-          <div class="sidebar__link">
             <i class="fa fa-archive"></i>
             <a href="#">Study Material</a>
           </div>
           <h2>College</h2>
           <div class="sidebar__link">
             <i class="fa fa-question"></i>
-            <a href="#">Student Requests</a>
+            <a href="/user/studentRequests/get">Student Requests</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-sign-out"></i>
-            <a href="#">Complaints</a>
+            <a href="/user/complaint/get">Complaints</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-calendar-check-o"></i>
@@ -102,7 +98,7 @@
           </div>
           <div class="sidebar__link">
             <i class="fa fa-files-o"></i>
-            <a href="#">Alumni Network</a>
+            <a href="/user/alumninetwork">Alumni Network</a>
           </div>
           <h2>CONTACT US</h2>
           <div class="sidebar__link">

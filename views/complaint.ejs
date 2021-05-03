@@ -35,37 +35,37 @@
       <main>
         <div class="main__container">
           <div class="section-title">
-            <h2>Student Request</h2>
+            <h2>COMPLAINTS</h2>
           </div>
           <div class="new-sort">
             
             <% if(query == "progress") { %>
-            <div class="dropdown">
-              <button class="dropbtn">IN PROGRESS</button>
-              <div class="dropdown-content">
-              <a href="/user/studentRequests/get">ALL</a>
-              <a href="/user/studentRequests/get?query=resolved">RESOLVED</a>
-              </div>
-            </div>
-            <% } else if(query == "resolved") { %>
-            <div class="dropdown">
-              <button class="dropbtn">RESOLVED</button>
-              <div class="dropdown-content">
-              <a href="/user/studentRequests/get">ALL</a>
-              <a href="/user/studentRequests/get?query=progress">IN PROGRESS</a>
-              </div>
-            </div>
-            <% } else { %>
               <div class="dropdown">
-                <button class="dropbtn">ALL</button>
+                <button class="dropbtn">IN PROGRESS</button>
                 <div class="dropdown-content">
-                <a href="/user/studentRequests/get?query=progress">IN PROGRESS</a>
-                <a href="/user/studentRequests/get?query=resolved">RESOLVED</a>
+                <a href="/user/complaint/get">ALL</a>
+                <a href="/user/complaint/get?query=resolved">RESOLVED</a>
                 </div>
               </div>
-            <% } %>
+              <% } else if(query == "resolved") { %>
+              <div class="dropdown">
+                <button class="dropbtn">RESOLVED</button>
+                <div class="dropdown-content">
+                <a href="/user/complaint/get">ALL</a>
+                <a href="/user/complaint/get?query=progress">IN PROGRESS</a>
+                </div>
+              </div>
+              <% } else { %>
+                <div class="dropdown">
+                  <button class="dropbtn">ALL</button>
+                  <div class="dropdown-content">
+                  <a href="/user/complaint/get?query=progress">IN PROGRESS</a>
+                  <a href="/user/complaint/get?query=resolved">RESOLVED</a>
+                  </div>
+                </div>
+              <% } %>
 
-            <a href="/user/studentRequests/create" style="float: right;"><button class="learn-more">NEW REQUEST</button></a>
+            <a href="/user/complaint/create" style="float: right;"><button class="learn-more">NEW REQUEST</button></a>
           </div>
           <% all.forEach( e => { %>
             <div class="body-class" style="margin: 20px;">
@@ -144,11 +144,11 @@
             <a href="#">Study Material</a>
           </div>
           <h2>College</h2>
-          <div class="sidebar__link active_menu_link">
+          <div class="sidebar__link">
             <i class="fa fa-question"></i>
             <a href="/user/studentRequests/get">Student Requests</a>
           </div>
-          <div class="sidebar__link">
+          <div class="sidebar__link active_menu_link">
             <i class="fa fa-sign-out"></i>
             <a href="/user/complaint/get">Complaints</a>
           </div>

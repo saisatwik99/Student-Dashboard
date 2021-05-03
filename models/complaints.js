@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const studentRequestSchema = new Schema({
+const complaintSchema = new Schema({
   firstName: {
     type: String,
     required: true
@@ -43,4 +43,4 @@ const studentRequestSchema = new Schema({
   
 });
 
-module.exports = mongoose.model('StudentRequest', studentRequestSchema);
+module.exports = mongoose.model('Complaint', complaintSchema);

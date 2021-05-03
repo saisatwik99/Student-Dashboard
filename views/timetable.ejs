@@ -14,7 +14,7 @@
     <title>Student Dashboard</title>
   </head>
   <body id="body">
-    <div class="container">
+    <div class="container-dashboard">
       <nav class="navbar">
         <div class="nav_icon" onclick="toggleSidebar()">
           <i class="fa fa-bars" aria-hidden="true"></i>
@@ -40,6 +40,9 @@
 
       <main>
         <div class="main__container">
+          <div class="section-title">
+            <h2>TIMETABLE</h2>
+          </div>
             <div class="timetable">
                 <div class="week-names">
                   <div>9:00 - 10:00</div>
@@ -165,11 +168,11 @@
           <h2>College</h2>
           <div class="sidebar__link">
             <i class="fa fa-question"></i>
-            <a href="#">Student Requests</a>
+            <a href="/user/studentRequests/get">Student Requests</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-sign-out"></i>
-            <a href="#">Complaints</a>
+            <a href="/user/complaint/get">Complaints</a>
           </div>
           <div class="sidebar__link">
             <i class="fa fa-calendar-check-o"></i>
@@ -181,18 +184,21 @@
           </div>
           <div class="sidebar__link">
             <i class="fa fa-files-o"></i>
-            <a href="#">Alumni Network</a>
+            <a href="/user/alumninetwork">Alumni Network</a>
           </div>
           <h2>CONTACT US</h2>
           <div class="sidebar__link">
             <i class="fa fa-money"></i>
             <a href="#">Contact Us</a>
           </div>
+          <!-- <div class="sidebar__logout">
+            <i class="fa fa-power-off"></i>
+            <a href="#">Log out</a>
+          </div> -->
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
-            <a onclick="document.getElementById('myform').submit();" style="cursor: pointer;">Log out</a>
+            <a onclick="document.getElementById('logout').submit();" style="cursor: pointer;">Log out</a>
           </div>
-          <form id="myform" method="post" action="/user/logout"></form>
         </div>
       </div>
     </div>

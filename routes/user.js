@@ -14,7 +14,11 @@ router.get('/results', verify, userController.results);
 router.get('/alumninetwork', verify, userController.alumninetwork);
 router.get('/opportunity', verify, userController.opportunity);
 router.post('/studentRequests/create', verify, userController.studentRequestsCreate);
-router.get('/studentRequests/get/:query', verify, userController.studentRequestsGet);
+router.get('/studentRequests/create', verify, userController.studentRequestsCreateGet);
+router.get('/studentRequests/get', verify, userController.studentRequestsGet);
+router.post('/complaint/create', verify, userController.complaintCreate);
+router.get('/complaint/create', verify, userController.complaintCreateGet);
+router.get('/complaint/get', verify, userController.complaintGet);
 router.post('/logout', userController.logout);
 
 module.exports = router;
