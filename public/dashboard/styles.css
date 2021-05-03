@@ -165,7 +165,7 @@ main {
   margin: 20px 0;
 }
 
-.card {
+.card-dashboard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

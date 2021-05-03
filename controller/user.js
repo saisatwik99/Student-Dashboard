@@ -68,9 +68,9 @@ exports.library = async (req, res) => {
     res.render("library", {name: user.firstName});
 }
 
-exports.results = async (req, res) => {
+exports.almanac = async (req, res) => {
     const user = await User.findOne({ email: req.user.email });
-    res.render("results", {name: user.firstName});
+    res.render("almanac", {name: user.firstName});
 }
 
 exports.alumninetwork = async (req, res) => {
