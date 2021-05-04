@@ -195,3 +195,9 @@ exports.complaintGet = async (req, res) => {
     });
     res.render( "complaint", { all: modifiedResult, name: user.firstName, query });
 }
+
+exports.studyMaterial = async (req, res) => {
+    const user = await User.findOne({ email: req.user.email });
+    
+    res.render("studyMaterial", {name: user.firstName});
+}

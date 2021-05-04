@@ -20,6 +20,7 @@ router.post('/complaint/create', verify, userController.complaintCreate);
 router.get('/complaint/create', verify, userController.complaintCreateGet);
 router.get('/complaint/get', verify, userController.complaintGet);
 router.get('/almanac', verify, userController.almanac);
+router.get('/studyMaterial', verify, userController.studyMaterial);
 router.post('/logout', userController.logout);
 
 module.exports = router;
