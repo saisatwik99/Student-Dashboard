@@ -71,7 +71,7 @@ body {
   /* grid-gap: 0.2rem; */
 }
 
-.navbar {
+.navbar-dashboard {
   background: #ffffff;
   grid-area: nav;
   height: 60px;
