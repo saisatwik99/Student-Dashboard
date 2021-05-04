@@ -1,19 +1,6 @@
-/*=========================================================================================
-    File Name: fullcalendar.js
-    Description: Fullcalendar
-    --------------------------------------------------------------------------------------
-    Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
-    Version: 1.0
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
-==========================================================================================*/
-
-
 $(document).ready(function(){
 
-	/************************************
-	*				Default				*
-	************************************/
+	
 	$('#fc-default').fullCalendar({
 		defaultDate: '2016-06-12',
 		editable: true,
