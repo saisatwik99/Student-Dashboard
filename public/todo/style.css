@@ -98,6 +98,8 @@
   }
   .add-control .form-control {
     padding-right: 25px;
+    height: 35px;
+    font-size: 14px;
   }
   .add-control .refresh {
     position: absolute;
@@ -271,13 +273,7 @@
       text-align: center;
   }
   
-  p {
-      margin: 15px 0 10px;
-      font-size: 46px;
-      font-weight: 700;
-      color: #FFF;
-     
-  }
+  
   
   
   .fa-ban:before {
@@ -355,8 +351,12 @@
   margin-top: 50px;
   height: 100%;
 }
-.todo-calender-child{
-  width: 50%;
+.todo-calender-child-1{
+  width: 40%;
+  height: 100%;
+}
+.todo-calender-child-2{
+  width: 60%;
   height: 100%;
 }
 .item-todo-size{

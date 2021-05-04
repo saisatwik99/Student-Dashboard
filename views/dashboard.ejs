@@ -15,15 +15,15 @@
     <title>Student Dashboard</title>
 
     <!-- NEW CONTENT STARTS HERE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
       <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
       <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
       <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
       <link rel="stylesheet" href="/todo/style.css">
 
-    <!-- NEW CONTENT ENDS HERE -->
-
-
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+      <link rel="stylesheet" href="/calender-todo/style.css">
   </head>
   <body id="body">
     <div class="container-dashboard">
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="todo-calender">
-            <div class="todo-calender-child">
+            <div class="todo-calender-child-1">
               <div class="today"></div>
               <div class="row">
                  <div class="item-todo-size">
@@ -70,6 +70,98 @@
                     </ul>
                  </div>
               </div>
+           </div>
+           <div class="todo-calender-child-2">
+            <div class="col-md-12">
+              <div class="elegant-calencar d-md-flex">
+                <div class="wrap-header d-flex align-items-center img" style="background-image: url(/calender-todo/bg.jpg);">
+                  <p id="reset">Today</p>
+                  <div id="header" class="p-0">
+                    <!-- <div class="pre-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-left"></i></div> -->
+                    <div class="head-info">
+                      <div class="head-month"></div>
+                        <div class="head-day"></div>
+                    </div>
+                    <!-- <div class="next-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-right"></i></div> -->
+                  </div>
+                </div>
+                <div class="calendar-wrap">
+                  <div class="w-100 button-wrap">
+                    <div class="pre-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-left"></i></div>
+                    <div class="next-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-right"></i></div>
+                  </div>
+                  <table id="calendar">
+                    <thead>
+                        <tr>
+                          <th>Sun</th>
+                          <th>Mon</th>
+                          <th>Tue</th>
+                          <th>Wed</th>
+                          <th>Thu</th>
+                          <th>Fri</th>
+                          <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
            </div>
           </div>
         </div>
@@ -159,6 +251,9 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="/todo/app.js" type="text/javascript"></script>
     <!-- TODO -->
-
+    <script src="/calender-todo/jquery.min.js"></script>
+  <script src="/calender-todo/popper.js"></script>
+  <script src="/calender-todo/bootstrap.min.js"></script>
+  <script src="/calender-todo/main.js"></script>
   </body>
 </html>
