@@ -16,6 +16,9 @@ const alumniSchema = new Schema({
   },
   role: {
     type: String 
+  },
+  image: {
+    type: String
   }
   
 });

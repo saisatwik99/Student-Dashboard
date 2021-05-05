@@ -50,7 +50,8 @@ exports.addAlumni = async (req, res, next) => {
         fullName,
         email,
         linkedln,
-        role
+        role,
+        image
     } = req.body;
 
     const emailExist = await Alumni.findOne({email});
@@ -58,7 +59,7 @@ exports.addAlumni = async (req, res, next) => {
 
     try {
         const result = await Alumni.create({ 
-            fullName, email, linkedln, role
+            fullName, email, linkedln, role, image
         });
         res.send(result);
     }
