@@ -469,6 +469,23 @@ $(document).ready(function(){
 
 	});
 
+	function dateToday() {
+		var today = new Date();
+		var dd = today.getDate();
+
+		var mm = today.getMonth()+1; 
+		var yyyy = today.getFullYear();
+		if(dd<10) 
+		{
+			dd='0'+dd;
+		} 
+
+		if(mm<10) 
+		{
+			mm='0'+mm;
+		} 
+		return yyyy+'-'+mm+'-'+dd;
+	}
 
 	/****************************************
 	*				Selectable				*
@@ -479,7 +496,7 @@ $(document).ready(function(){
 			center: 'title',
 			right: 'month,agendaWeek,agendaDay'
 		},
-		defaultDate: '2016-06-12',
+		defaultDate: '2021-05-05',
 		selectable: true,
 		selectHelper: true,
 		select: function(start, end) {
@@ -499,59 +516,113 @@ $(document).ready(function(){
 		eventLimit: true, // allow "more" link when too many events
 		events: [
 			{
-				title: 'All Day Event',
-				start: '2016-06-01'
+				title: 'WAD Final Review',
+				start: '2021-05-07'
 			},
 			{
-				title: 'Long Event',
-				start: '2016-06-07',
-				end: '2016-06-10'
+				title: 'AI Viva',
+				start: '2021-05-05'
 			},
 			{
-				id: 999,
-				title: 'Repeating Event',
-				start: '2016-06-09T16:00:00'
+				title: 'ML Viva',
+				start: '2021-05-04'
 			},
 			{
-				id: 999,
-				title: 'Repeating Event',
-				start: '2016-06-16T16:00:00'
+				title: 'WAD Viva',
+				start: '2021-05-03'
 			},
 			{
-				title: 'Conference',
-				start: '2016-06-11',
-				end: '2016-06-13'
+				title: 'CS4 Viva',
+				start: '2021-05-01'
 			},
 			{
-				title: 'Meeting',
-				start: '2016-06-12T10:30:00',
-				end: '2016-06-12T12:30:00'
+				title: 'CCN Viva',
+				start: '2021-04-30'
 			},
 			{
-				title: 'Lunch',
-				start: '2016-06-12T12:00:00'
+				title: 'TOC Viva',
+				start: '2021-04-28'
 			},
 			{
-				title: 'Meeting',
-				start: '2016-06-12T14:30:00'
+				title: 'End Sem Exams',
+				start: '2021-04-19',
+				end: '2021-04-27'
 			},
 			{
-				title: 'Happy Hour',
-				start: '2016-06-12T17:30:00'
+				title: 'Ugadi',
+				start: '2021-04-13'
 			},
 			{
-				title: 'Dinner',
-				start: '2016-06-12T20:00:00'
+				title: 'Good Friday',
+				start: '2021-04-02'
 			},
 			{
-				title: 'Birthday Party',
-				start: '2016-06-13T07:00:00'
+				title: 'Holi',
+				start: '2021-03-29'
 			},
 			{
-				title: 'Click for Google',
-				url: 'http://google.com/',
-				start: '2016-06-28'
+				title: 'Mid Sem Exams',
+				start: '2021-02-15',
+				end: '2021-02-24'
+			},
+			{
+				title: 'Republic Day',
+				start: '2021-01-26'
+			},
+			{
+				title: 'Sankranti/Pongal',
+				start: '2021-01-14'
+			},
+			{
+				title: 'Summer Vacation',
+				start: '2021-05-08',
+				end: '2021-08-10'
 			}
+			// {
+			// 	id: 999,
+			// 	title: 'Repeating Event',
+			// 	start: '2016-06-09T16:00:00'
+			// },
+			// {
+			// 	id: 999,
+			// 	title: 'Repeating Event',
+			// 	start: '2016-06-16T16:00:00'
+			// },
+			// {
+			// 	title: 'Conference',
+			// 	start: '2016-06-11',
+			// 	end: '2016-06-13'
+			// },
+			// {
+			// 	title: 'Meeting',
+			// 	start: '2016-06-12T10:30:00',
+			// 	end: '2016-06-12T12:30:00'
+			// },
+			// {
+			// 	title: 'Lunch',
+			// 	start: '2016-06-12T12:00:00'
+			// },
+			// {
+			// 	title: 'Meeting',
+			// 	start: '2016-06-12T14:30:00'
+			// },
+			// {
+			// 	title: 'Happy Hour',
+			// 	start: '2016-06-12T17:30:00'
+			// },
+			// {
+			// 	title: 'Dinner',
+			// 	start: '2016-06-12T20:00:00'
+			// },
+			// {
+			// 	title: 'Birthday Party',
+			// 	start: '2016-06-13T07:00:00'
+			// },
+			// {
+			// 	title: 'Click for Google',
+			// 	url: 'http://google.com/',
+			// 	start: '2016-06-28'
+			// }
 		]
 	});
 
