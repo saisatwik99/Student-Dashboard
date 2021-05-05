@@ -3,24 +3,27 @@
 <head>
 	<title>Student Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="/Login/css/style.css">
-	<link rel="stylesheet" type="text/css" href="/flash/style.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Condensed&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div id="success-box">
-		<div class="dot"></div>
-		<div class="dot two"></div>
-		<div class="face">
-		  <div class="eye"></div>
-		  <div class="eye right"></div>
-		  <div class="mouth happy"></div>
+	<% if(alert === 'password') { %>
+		<div class="alert alert-danger alert-container" role="alert">
+			<strong>Login Failed!</strong> Incorrect password 😕
 		</div>
-		<div class="shadow scale"></div>
-		<div class="message"><h1 class="alert">Success!</h1><p>yay, everything is working.</p></div>
-		
-	  </div>
+	<% } else if(alert === 'email') { %>
+		<div class="alert alert-danger alert-container" role="alert">
+			<strong>Login Failed!</strong> Email not found 😕
+		</div>
+	<% } else if(alert === 'needLogin') { %>
+		<div class="alert alert-danger alert-container" role="alert">
+			<strong>You need to Login! 😕</strong> 
+		</div>
+	<% } %>
 	<img class="wave" src="/Login/img/wave.png">
 	<div class="container">
 		<div class="img">
@@ -37,7 +40,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Email</h5>
-           		   		<input type="text" class="input" name="email">
+           		   		<input type="text" class="input" name="email" required>
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -46,7 +49,7 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input" name="password">
+           		    	<input type="password" class="input" name="password" required>
             	   </div>
             	</div>
             	<a href="#">Forgot Password?</a>
@@ -55,5 +58,13 @@
         </div>
     </div>
     <script type="text/javascript" src="/Login/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script>
+		window.setTimeout(function() {
+    			$(".alert").fadeTo(500, 0).slideUp(500, function(){
+        		$(this).remove(); 
+    		});
+		}, 5000);
+	</script>
 </body>
 </html>

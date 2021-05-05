@@ -9,16 +9,16 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 exports.getLogin = (req, res) => {
-    res.render('login');
+    res.render('login', {alert: ''});
 }
 
 exports.login = async (req, res, next) => {
 
     const user = await User.findOne({ email: req.body.email });
-    if(!user)  return res.status(400).send('Email not found');
+    if(!user)  return res.render('login', {alert: 'email'});
 
     const validPass = await bcrypt.compare(req.body.password, user.password);
-    if(!validPass) return res.status(400).send('Invalid Password');
+    if(!validPass) return res.render('login', {alert: 'password'});
 
     
     const token = jwt.sign({_id: user._id, email: user.email}, process.env.TOKEN_SECRET);
