@@ -81,8 +81,7 @@
                                 <h2><strong><%= e.title %></strong></h2>
                                 
                                 <p><%= e.description %></p>
-                                <p> <span style="color: #f74b5c; font-weight: 400; text-transform: uppercase;"><%= e.firstName %></span> 
-                                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  <span class="date"><%= e.date %></span>     <span class="status">STATUS : <%= e.status %> 
+                                <p> <span class="date"><%= e.date %></span>     <span class="status">STATUS : <%= e.status %> 
                                     <% if(e.status == "RESOLVED") { %>
                                       <span class="check">&#10004;</span>
                                     <% } else if(e.status == "IN PROGRESS") { %>

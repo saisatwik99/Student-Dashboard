@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -47,12 +48,12 @@ body-class {
   overflow: hidden;
   /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 3px 5px 3px rgba(0, 0, 0, 0.2); */
   width: 800px;
-  height: 280px;
+  height: 260px;
   position: relative;
   display: flex;
   align-items: flex-end;
   padding: 30px;
-  font-family: Open Sans;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
   line-height: 1.8;
 }
@@ -67,7 +68,7 @@ body-class {
   height: 100%;
   left: 0;
   top: 0;
-  padding: 75px 0 0;
+  padding: 55px 0 0;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -88,11 +89,12 @@ body-class {
   font-weight: 300;
   font-size: 3em;
   line-height: 1;
-  margin: 0 0 30px;
+  margin: 0 0 15px;
 }
 .cards .card-content .col h2 strong {
-  font-weight: 550;
+  font-weight: 700;
   font-size: 32px;
+  color: #1967d2;
 }
 .cards .card-content .col img {
   max-width: 90%;
