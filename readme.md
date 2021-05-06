@@ -1,3 +1,25 @@
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="public/home/favicon.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Student Dashboard </h3>
+  
+  <p align="center">
+    Student Dashboard has features to view and manage academic performance, track your daily activities.
+  
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://beneficent-sd.herokuapp.com/">View Demo</a>
+  </p>
+</p>
+
+
 # Student Dashboard
 
 * Student Dashboard helps students get access to their daily necessary needs like timetable, track their attendence and academic performance, share study materials, post complaints, get updates about internship and research opportunities within and outside the institute. It also helps students to schedule their daily activities ( like a To-do app ).
@@ -24,3 +46,12 @@ sh
 * Create a .env file with `MONGODB_URI, TOKEN_SECRET, PORT` variables
 
 * Run `npm run dev`
+
+# Software used:
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />   <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" />   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />   <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"/>
+<img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/>  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />  <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" />  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
+
+# ✏ Contributing
+
+Feel free to dive in! [Open an issue](https://github.com/saisatwik99/Student-Dashboard/issues/new) or submit PRs.
+
