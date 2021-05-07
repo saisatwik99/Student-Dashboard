@@ -9,7 +9,7 @@
   <h3 align="center">Student Dashboard </h3>
   
   <p align="center">
-    Student Dashboard has features to view and manage academic performance, track your daily activities
+    Student Dashboard has features to view and manage academic performance, track your daily activities.
   <br>
     <a href="http://saisatwik.me/Student-Dashboard/"><strong>Explore the docs »</strong></a>
   <br>
