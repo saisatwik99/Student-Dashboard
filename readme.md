@@ -9,12 +9,10 @@
   <h3 align="center">Student Dashboard </h3>
   
   <p align="center">
-    Student Dashboard has features to view and manage academic performance, track your daily activities.
-  
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+    Student Dashboard has features to view and manage academic performance, track your daily activities
+  <br>
+    <a href="http://saisatwik.me/Student-Dashboard/"><strong>Explore the docs »</strong></a>
+  <br>
     <a href="https://beneficent-sd.herokuapp.com/">View Demo</a>
   </p>
 </p>
